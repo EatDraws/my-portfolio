@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background-color: #121212;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+
+.nav-link.active {
+    color: #ff6347;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #ff6347;
+}
+
+/* About Page Styling */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Full height minus header */
+    padding: 20px;
+    gap: 50px; /* Space between text and logo section */
+}
+
+.about-text {
+    flex: 1;
+    background-color: #242424; /* Slightly lighter background */
+    padding: 20px;
+    border-radius: 8px; /* Smooth edges */
+    max-width: 500px; /* Constrained text width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.logo-section {
+    flex: 1;
+    background-color: #242424; /* Slightly lighter background */
+    padding: 20px;
+    border-radius: 8px; /* Smooth edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.logo-name-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram-link img.social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.instagram-link img.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+    background-color: #121212;
+}

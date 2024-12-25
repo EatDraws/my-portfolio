@@ -1,0 +1,183 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
+    margin: 0;
+}
+
+/* Instagram Link Styling */
+.instagram-link {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.instagram-link img.social-icon {
+    width: 30px; /* Reduced size for alignment */
+    height: 30px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.instagram-link img.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Logo and Header Styling */
+.logo-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo {
+    width: 250px; /* Adjusted logo size */
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Navigation Styling */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+
+.nav-link.active {
+    color: #ff6347;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6347;
+}
+
+/* Royal Blue Line for Separation */
+.separator-line {
+    width: calc(100% - 40px); /* Centered but independent of images */
+    height: 2px; /* Made line thinner */
+    background-color: royalblue; /* Changed color to royal blue */
+    margin: 20px auto 0 auto; /* Positioned below the grid */
+}
+
+/* Illustrations Grid Styling */
+.illustrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%; /* Occupy full screen width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.illustrations-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effect: Blur other images only when hovering */
+.illustrations-grid:hover img {
+    filter: blur(2px);
+    opacity: 0.7;
+}
+
+.illustrations-grid img:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+#modal img {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+}
+
+#modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#modal .prev,
+#modal .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+
+#modal .prev {
+    left: 20px;
+}
+
+#modal .next {
+    right: 20px;
+}
+
+/* Blur effect for background when modal is active */
+body.modal-active > *:not(#modal) {
+    filter: blur(10px);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+}
